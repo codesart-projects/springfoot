@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.codesart</groupId>
+        <artifactId>springfoot-common-bom</artifactId>
+        <version>0.0.1</version>
+        <relativePath>./springfoot-common-bom/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>springfoot</artifactId>
+    <packaging>pom</packaging>
+
+    <name>springfoot</name>
+    <description>base framework</description>
+    <url>https://github.com/codesart-projects/springfoot</url>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>isxuew</name>
+            <email>isxuew@gmail.com</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>https://github.com/codesart-projects/springfoot.git</url>
+        <connection>scm:git@github.com:isxuew/springfoot.git</connection>
+        <developerConnection>scm:git@github.com:codesart-projects/springfoot.git</developerConnection>
+    </scm>
+
+    <modules>
+        <module>springfoot-common-bom</module>
+        <module>springfoot-common-core</module>
+        <module>springfoot-commons</module>
+        <module>springfoot-demo</module>
+    </modules>
+
+</project>
