@@ -28,16 +28,13 @@
             <groupId>com.querydsl</groupId>
             <artifactId>querydsl-apt</artifactId>
             <version>${querydsl.version}</version>
+            <classifier>jakarta</classifier>
         </dependency>
         <dependency>
             <groupId>com.querydsl</groupId>
             <artifactId>querydsl-jpa</artifactId>
             <version>${querydsl.version}</version>
             <classifier>jakarta</classifier>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.persistence</groupId>
-            <artifactId>jakarta.persistence-api</artifactId>
         </dependency>
         <!-- druid -->
         <dependency>
@@ -51,6 +48,7 @@
             <scope>test</scope>
             <optional>true</optional>
         </dependency>
+
     </dependencies>
 
     <build>
@@ -69,7 +67,7 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>generate-test-entities</id>
+                        <id>generate-test-sources</id>
                         <phase>generate-test-sources</phase>
                         <goals>
                             <goal>test-process</goal>

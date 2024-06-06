@@ -1,0 +1,2 @@
+com.codesart.springfoot.common.data.jpa.config.SpringFootCommonDataJpaAutoConfig
+com.codesart.springfoot.common.data.jpa.config.SpringFootCommonDataJpaQuerydslAutoConfig

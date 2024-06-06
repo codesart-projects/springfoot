@@ -2,6 +2,7 @@ package com.codesart.springfoot.common.data.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.querydsl.core.annotations.QueryExclude;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;
@@ -24,6 +25,7 @@ import java.time.LocalDateTime;
 
 @Data
 @SuperBuilder
+@QueryExclude
 @MappedSuperclass
 @NoArgsConstructor
 @AllArgsConstructor
