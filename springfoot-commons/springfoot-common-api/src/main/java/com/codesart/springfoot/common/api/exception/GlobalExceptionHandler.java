@@ -21,7 +21,7 @@ public class GlobalExceptionHandler {
      * 参数校验
      */
     @ExceptionHandler({BindException.class})
-    public R bindExceptionHandler(BindException e) {
+    public <T> R<T> bindExceptionHandler(BindException e) {
         String detail = e.getBindingResult()
                 .getFieldErrors()
                 .stream()
@@ -34,7 +34,7 @@ public class GlobalExceptionHandler {
      * 校验 (assert)
      */
     @ExceptionHandler({IllegalArgumentException.class})
-    public R illegalArgumentExceptionHandler(IllegalArgumentException e) {
+    public <T> R<T> illegalArgumentExceptionHandler(IllegalArgumentException e) {
         return R.fail(e.getMessage());
     }
 
@@ -42,7 +42,7 @@ public class GlobalExceptionHandler {
      * 业务异常
      */
     @ExceptionHandler({CheckedException.class})
-    public ResponseEntity<R> exception(CheckedException e) {
+    public <T> ResponseEntity<R<T>> exception(CheckedException e) {
         return ResponseEntity.status(e.getHttpStatus()).body(R.init(e.getCode(), e.getMessage(), null));
     }
 
@@ -50,7 +50,7 @@ public class GlobalExceptionHandler {
      * 全局异常
      */
     @ExceptionHandler({Exception.class})
-    public R exception(Exception e) {
+    public <T> R<T> exception(Exception e) {
         log.error("globalException: {}", e.getMessage(), e);
         return R.fail(e.getMessage());
     }
